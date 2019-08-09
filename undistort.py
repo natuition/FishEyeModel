@@ -3,7 +3,7 @@ import argparse
 
 # Python script to launch undistort process from terminal
 # Usage: undistort.py "source_image_path" "calibration_file_path" "output_image_path"
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "source_image_path",
@@ -36,3 +36,7 @@ if __name__ == '__main__':
     undistorted_img = fisheye_module.undistort_from_file(args.source_image_path, k, d, dims)
     fisheye_module.save_image(undistorted_img, args.output_image_path)
     print("Undistort process finished successfully")
+
+
+if __name__ == '__main__':
+    main()

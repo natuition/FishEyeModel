@@ -6,6 +6,7 @@ import argparse
 # Usage: calibrate.py "folder_of_calibration_images" "output_path"
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
+
     parser.add_argument(
         "image_folder",
         help="Folder where the calibration images are stored"
